@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ *main - Entry Point
+ *Create Variables
+ *Use the sizeof operator to operate the size of the variables
+ *Return: 0
+ */
+
 int main(void)
 {
     char charType;
