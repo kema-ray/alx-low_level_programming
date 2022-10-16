@@ -1,6 +1,4 @@
-// C program to demonstrate putchar() method
-  
-#include <stdio.h>
+ #include <stdio.h>
 
 /**
  *main - Entry Point
