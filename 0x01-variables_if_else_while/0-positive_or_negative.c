@@ -13,11 +13,11 @@ int main(void)
 	/* your code goes there */
 	printf("Enter a number: ");
 	scanf("%d", &n);
-	if (n>0)
+	if (n > 0)
 	{
 		printf("Is positive\n");
 	}
-	else if (n==0)
+	else if (n == 0)
 	{
 		printf("Is zero\n");
 	}
