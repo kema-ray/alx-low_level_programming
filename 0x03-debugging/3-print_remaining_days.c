@@ -7,7 +7,6 @@
  * @month: month in number format
  * @day: day of month
  * @year: year
- * code written by VincentKimatu
  * Return: void
  */
 
