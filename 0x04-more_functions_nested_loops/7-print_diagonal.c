@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
   * print_diagonal - draws a diagonal line on the terminal
@@ -25,5 +26,5 @@ void print_diagonal(int n)
 			putchar('\n');
 		}
 	}
-	putchar('\n')
+	putchar('\n');
 }
