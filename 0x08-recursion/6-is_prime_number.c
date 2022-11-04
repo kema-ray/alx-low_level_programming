@@ -2,7 +2,7 @@
 
 /**
   * is_prime - returns a number is prime recurscively
-  * @i: input value
+  * @n: input value
   * @j: input value
   * Return: prime number
   */
