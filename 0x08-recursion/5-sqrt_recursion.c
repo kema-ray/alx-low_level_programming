@@ -12,7 +12,7 @@ int square_recursion(int n, int j)
 	if (j * j > n)
 		return (-1);
 	if (j * j == n)
-		return (1);
+		return (j);
 	return (square_recursion(n, j + 1));
 }
 
