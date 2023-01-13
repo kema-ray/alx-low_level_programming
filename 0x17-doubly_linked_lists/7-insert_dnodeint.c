@@ -8,37 +8,47 @@
  * @n: data to insert in the new node
  * Return: pointer to the new node, or NULL
  */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
 	dlistint_t *new;
-	dlistint_t *temp = *h;
+	dlistint_t *temp;
 
-	new = malloc(sizeof(dlistint_t));
-	if (!new || !h)
+	if (h == NULL)
 		return (NULL);
-
-	new->n = n;
-	new->next = NULL;
-
+	temp = *h;
+	i = 0;
 	if (idx == 0)
 	{
+		new = malloc(sizeof(dlistint_t));
+		if (new == NULL)
+			return (NULL);
+		new->n = n;
 		new->next = *h;
+		new->prev = NULL;
+		if (*h != NULL)
+			(*h)->prev = new;
 		*h = new;
 		return (new);
 	}
-
-	for (i = 0; temp && i < idx; i++)
+	while (temp != NULL)
 	{
 		if (i == idx - 1)
 		{
+			new = malloc(sizeof(dlistint_t));
+			if (new == NULL)
+				return (NULL);
+			new->n = n;
 			new->next = temp->next;
+			new->prev = temp;
 			temp->next = new;
+			if (new->next != NULL)
+				new->next->prev = new;
 			return (new);
 		}
-		else
-			temp = temp->next;
+		temp = temp->next;
+		i++;
 	}
-
 	return (NULL);
 }
